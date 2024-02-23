@@ -1,129 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #6d5252;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .calculator {
-            background-color: #0604049f;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-            text-align: center;
+    body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(16, 56, 91);
+        background-repeat: no-repeat;
         }
 
         h1 {
-            color: #ffd5d5;
-            margin-top: 0;
+            text-align: center;
+            color: #fff;
         }
 
-        .display {
-            width: 100%;
-            height: 50px;
-            font-size: 24px;
-            text-align: right;
+        form {
+            width: 300px;
+            height: 330px;
+            margin: 0 auto;
+            background-color: #6d8a23;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top:30%;
+            left: 38%;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            height: 40px;
+            margin-bottom: 10px;
             padding: 5px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #fff3f3;
-            outline: none;
+            font-size: 20px;
+            text-align: right;
+            border-radius: 10px;
         }
 
-        .row {
-            margin-bottom: 10px;
-        }
-
-        .button {
+        input[type="button"] {
             width: 50px;
             height: 50px;
-            margin: 5px;
-            font-size: 18px;
-            border-radius: 5px;
-            border: none;
+            margin: 5px 10px 15px 10px;
+            font-size: 20px;
+            border-radius: 15px;
             cursor: pointer;
-            background-color: #231f1f;
-            color: #333;
-            transition: background-color 0.3s;
+        
         }
 
-        .button:hover {
-            background-color: #eed9d9;
-        }
+       
 
-        .button.num {
-            background-color: #f4e000;
+        input[type="button"].num {
+            background-color: #2cce2c;
             color: #fff;
+            border: 1px solid black;
         }
 
-        .button.num:hover {
-            background-color: #a77a21;
-        }
-
-        .button.numb {
+        input[type="button"].numb {
             background-color: #f44336;
             color: #fff;
+            border: none;
+            border: 1px solid black;
         }
 
-        .button.numb:hover {
-            background-color: #d32f2f;
-        }
-
-        .button.number {
-            background-color: #008CBA;
+        input[type="button"].operator {
+            background-color: #2387a9;
             color: #fff;
+            border: none;
+            border: 1px solid black;
         }
-
-        .button.number:hover {
-            background-color: #007a9e;
-        }
+        
+        
     </style>
-</head>
-<body>
-    <div class="calculator">
+    </head>
+    <body>
         <h1>Calculator</h1>
-        <input type="text" class="display" name="display"><br>
-        <div class="row">
-            <input type="button" value="1" onclick="calc.display.value+='1'" class="button num">
-            <input type="button" value="2" onclick="calc.display.value+='2'" class="button num">
-            <input type="button" value="3" onclick="calc.display.value+='3'" class="button num">
-            <input type="button" value="+" onclick="calc.display.value+='+'" class="button number">
-        </div>
-        <div class="row">
-            <input type="button" value="4" onclick="calc.display.value+='4'" class="button num">
-            <input type="button" value="5" onclick="calc.display.value+='5'" class="button num">
-            <input type="button" value="6" onclick="calc.display.value+='6'" class="button num">
-            <input type="button" value="-" onclick="calc.display.value+='-'" class="button number">
-        </div>
-        <div class="row">
-            <input type="button" value="7" onclick="calc.display.value+='7'" class="button num">
-            <input type="button" value="8" onclick="calc.display.value+='8'" class="button num">
-            <input type="button" value="9" onclick="calc.display.value+='9'" class="button num">
-            <input type="button" value="*" onclick="calc.display.value+='*'" class="button number">
-        </div>
-        <div class="row">
-            <input type="button" value="0" onclick="calc.display.value+='0'" class="button num">
-            <input type="button" value="c" onclick="calc.display.value=''" class="button numb">
-            <input type="button" value="/" onclick="calc.display.value+='/'" class="button number">
-            <input type="button" value="=" onclick="calculate()" class="button number">
-        </div>
-    </div>
+        <form name="calc">
+          <input type ="text" name="display"><br>
+          <input type="button" value="1" onclick="calc.display.value+='1'"class="num">
+          <input type="button" value="2" onclick="calc.display.value+='2'"class="num" >
+          <input type="button" value="3" onclick="calc.display.value+='3'" class="num">
+          <input type="button" value="4" onclick="calc.display.value+='4'"class="num" ><br>
+          <input type="button" value="5" onclick="calc.display.value+='5'" class="num">
+          <input type="button" value="6" onclick="calc.display.value+='6'" class="num">
+          <input type="button" value="7" onclick="calc.display.value+='7'"class="num" >
+          <input type="button" value="8" onclick="calc.display.value+='8'" class="num"><br>
+          <input type="button" value="9" onclick="calc.display.value+='9'" class="num">
+          <input type="button" value="0" onclick="calc.display.value+='0'" class="num">
+          <input type="button" value="c" onclick="calc.display.value=''" class="numb">
+          <input type="button" value="+" onclick="calc.display.value+='+'"class="operator" ><br>
+          <input type="button" value="-" onclick="calc.display.value+='-'"class="operator" >
+          <input type="button" value="*" onclick="calc.display.value+='*'" class="operator">
+          <input type="button" value="/" onclick="calc.display.value+='/'" class="operator">
+          <input type="button" value="=" onclick="calc.display.value=eval(calc.display.value)" >
 
-    <script>
-        function calculate() {
-            var result = eval(calc.display.value);
-            calc.display.value = result;
-        }
-    </script>
-</body>
+
+
+          </form>
+    </body>
 </html>
